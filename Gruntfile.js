@@ -677,7 +677,7 @@ var overrides      = require('./core/server/overrides'),
         //
         // This task is identical to `grunt init`, except it does not build client dependencies
         grunt.registerTask('build', 'Build client app',
-            ['subgrunt:init', 'clean:tmp', 'default']);
+            ['clean:tmp', 'default']);
 
         // ### Default asset build
         // `grunt` - default grunt task
