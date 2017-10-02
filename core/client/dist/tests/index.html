@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ghost Tests</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+<meta name="ghost-admin/config/environment" content="%7B%22modulePrefix%22%3A%22ghost-admin%22%2C%22environment%22%3A%22test%22%2C%22rootURL%22%3A%22/%22%2C%22locationType%22%3A%22none%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%2C%22Array%22%3Atrue%2C%22String%22%3Atrue%2C%22Function%22%3Atrue%7D%2C%22ENABLE_DS_FILTER%22%3Atrue%7D%2C%22APP%22%3A%7B%22version%22%3A%221.10%22%2C%22LOG_ACTIVE_GENERATION%22%3Afalse%2C%22LOG_VIEW_LOOKUPS%22%3Afalse%2C%22rootElement%22%3A%22%23ember-testing%22%2C%22name%22%3A%22ghost-admin%22%7D%2C%22ember-simple-auth%22%3A%7B%7D%2C%22moment%22%3A%7B%22includeTimezone%22%3A%22all%22%7D%2C%22ember-cli-mirage%22%3A%7B%22usingProxy%22%3Afalse%2C%22useDefaultPassthroughs%22%3Atrue%7D%2C%22exportApplicationGlobal%22%3Atrue%2C%22ember-load%22%3A%7B%22loadingIndicatorClass%22%3A%22ember-load-indicator%22%7D%7D" />
+    
+
+    <link rel="stylesheet" href="/assets/vendor-55598de359e5790052feda4c2026f445.css">
+    <link rel="stylesheet" href="/assets/ghost-2edcb25e49e68e17591bd6b0aef8d9d2.css">
+    <link rel="stylesheet" href="/assets/test-support-23f488afb2dced0771394ca48cf77950.css">
+
+    
+    
+
+    <style>
+        /* fix to ensure we use full viewport height when testing */
+        #ember-testing {
+            height: 100%;
+        }
+        #ember-testing > div {
+            height: 100%;
+        }
+        /* fix firefox not supporting `zoom: 50%` */
+        _::-moz-range-track, body:last-child #ember-testing {
+            -moz-transform-origin: 0 0;
+            -moz-transform: scale(0.5);
+            width: 200%;
+            height: 200%;
+        }
+    </style>
+  </head>
+  <body>
+    
+    <div id="mocha"></div>
+<div id="mocha-fixture"></div>
+
+<div id="ember-testing-container">
+  <div id="ember-testing"></div>
+</div>
+
+
+    <script src="/testem.js" integrity=""></script>
+    <script src="/assets/vendor-b79cf923049e9aa1f35df906dea17607.js"></script>
+    <script src="/assets/test-support-05f1c9ac0d70f71c667284388e4a1dfd.js"></script>
+    <script src="/assets/ghost-14e4fad88fcbabcc365f06a2b63c0a53.js"></script>
+    <script src="/assets/tests-f6e02ad82489b531cee29bb70de1c16b.js"></script>
+
+    
+    <script>Ember.assert('The tests file was not loaded. Make sure your tests index.html includes "assets/tests-f6e02ad82489b531cee29bb70de1c16b.js".', EmberENV.TESTS_FILE_LOADED);</script>
+  </body>
+</html>
