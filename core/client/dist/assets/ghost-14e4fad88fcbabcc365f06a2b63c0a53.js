@@ -20066,7 +20066,7 @@ define('ghost-admin/routes/application', ['exports', 'ember-simple-auth/mixins/a
         _setAdminTheme: function _setAdminTheme() {
             var nightShift = this.get('feature.nightShift');
 
-            return this.get('lazyLoader').loadStyle('dark', 'assets/ghost-dark-9774d006c082c5c2fe1702fa7a46aac4.css', true).then(function () {
+            return this.get('lazyLoader').loadStyle('dark', 'assets/ghost-dark-796f2483cdcb41378d4aca49c15203b5.css', true).then(function () {
                 $('link[title=dark]').prop('disabled', !nightShift);
                 $('link[title=light]').prop('disabled', nightShift);
             });
