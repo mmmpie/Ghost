@@ -244,8 +244,7 @@ var overrides      = require('./core/server/overrides'),
                         var upstream = grunt.option('upstream') || process.env.GHOST_UPSTREAM || 'upstream';
                         grunt.log.writeln('Pulling down the latest master from ' + upstream);
                         return 'git checkout master; git pull ' + upstream + ' master; ' +
-                        'yarn; git submodule foreach "git checkout master && git pull ' +
-                        upstream + ' master"';
+                        'yarn;';
                     }
                 },
 
@@ -671,7 +670,7 @@ var overrides      = require('./core/server/overrides'),
         // `bower` does have some quirks, such as not running as root. If you have problems please try running
         // `grunt init --verbose` to see if there are any errors.
         grunt.registerTask('init', 'Prepare the project for development',
-            ['update_submodules:pinned', 'subgrunt:init', 'clean:tmp', 'default']);
+            ['subgrunt:init', 'clean:tmp', 'default']);
 
         // ### Build assets
         // `grunt build` - will build client assets (without updating the submodule)
@@ -758,7 +757,7 @@ var overrides      = require('./core/server/overrides'),
                     }]
                 });
 
-                grunt.task.run(['update_submodules:pinned', 'subgrunt:init', 'clean:tmp', 'prod', 'clean:release', 'copy:admin_html', 'copy:release', 'compress:release']);
+                grunt.task.run(['subgrunt:init', 'clean:tmp', 'prod', 'clean:release', 'copy:admin_html', 'copy:release', 'compress:release']);
             }
         );
     };
